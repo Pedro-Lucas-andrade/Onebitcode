@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: justify;
+    }
+    header{
+        background-image: url('https://th.bing.com/th/id/R.943648a8dd22d08edebcb2ce918767a8?rik=Ey8EiC%2fLQc4q0w&pid=ImgRaw&r=0');
+        background-position: center 40%;
+        background-size: cover;
+        margin: -10px -10px 0px -10px;
+        height: 10vh;
+    }
+    header img{
+        display: block;
+        margin: auto;
+        width: 40vh;
+        vertical-align: middle;
+    }
+    nav{
+        vertical-align: middle;
+        height: 22px;
+        margin-top: 16px;
+        background-color: rgba(0, 0, 0, 0.173);
+    }
+    a{
+        vertical-align: middle;
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+        padding: 2px 5px 3px 2px;
+        
+    }
+    a:hover{
+        background-color: rgba(255, 255, 255, 0.366);
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+    }
+    main{
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.256);
+        max-width: 930px;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 0px 0px 5px 5px;
+    }
+    body{
+        background-color: rgba(137, 43, 226, 0.103);
+    }
+    
+    #block01{
+        height: 550px;
+        max-width: 930px;
+        margin: auto;
+        display: none;
+    }
+    #block02{
+        height: 550px;
+        width: 930px;
+        margin: auto;
+        display: none;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.374);
+        padding: 0px -2px 0px 0px;
+        border-radius: 5px;
+    }
+    main img{
+        display: block;
+        border-radius: 10px;
+    }
+    #p01 {
+        display: block;
+        margin-top: -410px;
+        margin-left: 300px;
+        margin-bottom: 60px;
+        text-indent: 30px;
+    }
+    #p02 {
+        display: block;
+        margin-top: -450px;
+        margin-left: 320px;
+        text-indent: 30px;
+    }
+    #p03{
+        margin-left: 320px; 
+        text-indent: 30px;
+    }
+    div#ft01{
+        background-image: url('imagens/falcon_9.jpg');
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+       
+    }
+    #titulo01{
+        width: 200px;
+    }
+    div#titulo01 h3{
+        display: block;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px solid rgba(0, 0, 0, 0.238);
+    }
+    #ft01:hover{
+        background-size: 110%;
+    }
+    div#ft02{
+        display: block;
+        background-image: url('imagens/falcon_heavy.jpg');
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        margin-top: -190px;
+        margin-left: 430px;
+    }
+    
+    #text02{
+        padding-top: 445px;
+        width: 90vb;
+    }
+    #titulo02{
+        margin-left: 450px;
+        width: 200px;
+        margin-top: -35px;
+        color: white;
+        text-shadow: 1px solid black;
+    }
+    div#titulo02 h3{
+        position: absolute;
+        top: 100px;
+        color: black;
+        text-align: center;
+    }
+    #ft02:hover{
+        background-size: 110%;
+    }
+    #titulo002{
+        width: 300px;
+        margin-top: -500px;
+        background-color: rgba(137, 43, 226, 0.564);
+        color: white;
+        border-radius: 5px;
+    }
+    #titulo002 h3{
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/R.2f8bbf8f2484dcd205f85cf18cacbe05?rik=wSvoDgkiREl3ug&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f10%2fSpaceX_logo_black_Space_X.png&ehk=B%2bri1qcd%2fTG%2bDiBcNIz9tANHv3md%2feLyVkXkMsVlWs0%3d&risl=&pid=ImgRaw&r=0" alt="logo spacex">
+        <nav>
+            <a href="siteSpacex.html">Home</a>
+            <a href="pag3.html">Hire Us</a>
+        </nav>
+    </header>
+    <main>
+        <div id="block01">
+            <h2>Available Spaceships</h2> <br>
+            <h3>Falcon 9</h3>
+            <img src="imagens/falcon_9.jpg" alt="Foto da nave espacial falcon 9">
+            <section id="text01">
+                <p id="p01">O Falcon 9 (Falcão 9) é um foguete de dois estágios projetado e construído pela SpaceX no Estados Unidos. É movido pelos motores Merlin, também desenvolvidos pela SpaceX, queimando oxigênio líquido (LOX) e querosene refinado (RP-1) como propelentes. Seu nome deriva da composição da famosa Millenium Falcon com os nove motores do primeiro estágio do foguete. O foguete evoluiu através das versões v1.0 (2010–2013), v1.1 (2013–2016), v1.2 "Full Thrust" (2015–2018) e sua variante Bloco 5, voando desde maio de 2018. Ao contrário da maioria dos foguetes que são sistemas de lançamentos descartáveis, o Falcon 9 é parcialmente reutilizável, com o primeiro estágio sendo capaz de reentrar na atmosfera e pousar verticalmente após se separar do segundo estágio. Este feito foi realizado pela primeira vez no voo 20 com a versão v1.2 em dezembro de 2015.</p>
+            </section>
+            
+        </div>
+
+        <div id="titulo01">
+            <h3>FALCON 9</h3>
+        </div>
+        <div id="ft01" onclick="falcon09()">
+        </div>
+        <div id="titulo02">
+            <h3>FALCON HEAVY</h3>
+        </div>
+        <div id="ft02" onclick="falconH()">
+        </div>
+        
+        <div id="block02">
+            <h2>Available Spaceships</h2> <br>
+            
+            <div id="foto02">
+                <img src="imagens/falcon_heavy.jpg" alt="Foto da nave espacial falcon Heavy">
+            </div>
+            <div id="titulo002">
+                <h3>Falcon Heavy</h3>
+            </div>
+            <section id="text02">
+                <p id="p02">Depois do Falcon 9, a SpaceX pretendia construir um foguete ainda mais poderoso, e foi aí que surgiu o Falcon Heavy. Igualmente reutilizável, ele é o foguete mais poderoso já criado desde o Saturn V, da NASA, que levou o homem à Lua nas missões Apollo.
+                <p id="p03">O Falcon Heavy tem duas vezes mais capacidade de propulsão do que qualquer outro foguete usado nos dias atuais, e seu lançamento inaugural não-tripulado foi importante para mostrar que ele já está funcional e pronto para ser usado em missões mais ambiciosas. No lugar de suprimentos e astronautas, o Heavy transportou um Tesla Roadster com o traje espacial Starman.</p>
+            </p>
+            </section>
+        </div>
+    </main>
+
+    <script src="falcon09.js"></script>
+</body>
+</html>
