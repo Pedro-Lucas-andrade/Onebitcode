@@ -10,11 +10,14 @@
     <script>
         let personagem01 = prompt('Digite o nome do personagem que vai atacar: ')
         let poderAtk = Number(prompt(`Digite o poder de ataque do personagem '${personagem01}': `))
+
         let personagem02 = prompt('Digite o nome do personagem que vai defender: ')
-        let vida = Number(prompt(`Digite os pontos de vida do personagem que vai defender '${personagem01}': `))
-        let poderDef = Number(prompt(`Digite o poder de defesa do personagem '${personagem01}': `))
+        let vida = Number(prompt(`Digite os pontos de vida do personagem que vai defender '${personagem02}': `))
+        let poderDef = Number(prompt(`Digite o poder de defesa do personagem '${personagem02}': `))
         let temEscudo = confirm('O seu personagem de defesa tem, escudo?')
+
         let dano
+
         if ( temEscudo === true){
             let poderEscudo = Number(prompt('Digite o poder de defesa do escudo: '))
             if (poderAtk > poderDef){
@@ -25,8 +28,13 @@
         } else {
             dano = 0
         }
+        if(temEscudo === true){
+            temEscudo = 'Sim'
+        } else {
+            temEscudo = 'Não'
+        }
         vida -= dano
-        alert(`O dano causado por ${personagem01} no ${personagem02} foi de ${dano} pts\nO ${personagem02} fico com uma vida de ${vida} pts`)
+        alert(`${personagem01}:\nO dano causado: ${dano} pts\nPoder de ataque: ${poderAtk}\n\n${personagem02}:\nPontos de vida: ${vida}\nPoder de defesa: ${poderDef}\nPossui escudo: ${temEscudo}`)
     </script>
 </body>
 </html>
