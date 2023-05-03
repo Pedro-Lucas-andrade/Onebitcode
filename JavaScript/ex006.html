@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+    header, main{
+        width: 500px;
+        margin: auto;
+    }
+    header{
+        text-align: center;
+        background-color: rgb(16, 16, 96);
+        color: white;
+        padding: 5px 20px 1px 20px;
+    }
+    main{
+        background-color: blue;
+        padding: 20px;
+        height: 200px;
+        color: white;
+    }
+    #ires{
+        width: 400px;
+        height: 100px;
+        background-color: white;
+        margin: auto;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+<body>
+    <header>
+        <h1>Conversor de unidades</h1>
+    </header>
+    <main>
+        <p>
+            <label for="imetro">Metro:</label>
+            <input type="number" name="metro" id="imetro" placeholder="digite o valor em metro">
+            para &#x1F504
+            <input type="text" list="imedidas" placeholder="mm, km, hm..." id="imedida">
+            <datalist id="imedidas">
+                <option value="mm">milímetro</option>
+                <option value="cm">centímetro</option>
+                <option value="dm">decpimetro</option>
+                <option value="dam">decâmetro</option>
+                <option value="hm">hectômetro</option>
+                <option value="km">quilômetro</option>
+            </datalist>
+        </p>
+        <p>
+            <input type="button" value="verificar" onclick="converter()">
+        </p>
+        <p>
+            <div id="ires"></div>
+        </p>
+    </main>
+
+    <script src="ex006.js"></script>
+</body>
+</html>

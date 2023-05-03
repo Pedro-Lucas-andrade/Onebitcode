@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valorAtual = Number(prompt('Digite o valor de dinheiro disponível: '))
+        let opcao
+        
+        do {
+        opcao = Number(prompt(`Você possui um saldo de ${valorAtual} R$. Escolha uma das opções:\n1- Depositar\n2- Sacar\n3- Sair`))
+        
+        switch (opcao){
+            case 1:
+                valorAtual += Number(prompt('Qual valor deseja depositar?'))
+                alert(`seu saldo atual é de ${valorAtual} R$`)
+                break
+            case 2:
+                valorAtual -= Number(prompt('Qual valor deseja sacar?'))
+                alert(`seu saldo atual é de ${valorAtual} R$`)
+                break
+            case 3:
+                alert('Saindo...')
+                break
+            default:
+                alert('opção inválida, por favor digite um número que corresponde a uma das opções!')
+        } 
+    } while(opcao != 3)
+        
+    </script>
+</body>
+</html>
