@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palavra = prompt('digite uma palavra: ')
+        let contra = []
+        let contrario = ''
+        for(i = 1; i <= palavra.length; i++){
+            contra[i-1] = palavra[palavra.length-i]
+            contrario += contra[i-1]
+        }
+        alert(`${palavra} de trás pra frente é ${contrario}`)
+       if (contrario === palavra){
+            alert('é um palíndromo')
+       } else {
+        alert('não é um palíndromo')
+       }
+        
+        
+    </script>
+</body>
+</html>
