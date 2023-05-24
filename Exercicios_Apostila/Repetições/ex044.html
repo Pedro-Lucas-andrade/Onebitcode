@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contador</h1>
+
+    <p>
+        Digite o primeiro valor:
+        <input type="number" name="primeiroValor" id="iprimeiroValor">
+    </p>
+    <p>
+        Digite o ultimo valor:
+        <input type="number" name="ultimoValor" id="iultimoValor">
+    </p>
+    <p>
+        Digite o incremento:
+        <input type="number" name="incremento" id="iincremento">
+    </p>
+    <p>
+        <input type="button" value="Contar" onclick="contar()">
+    </p>
+    <p>
+        <div id="iresposta"></div>
+    </p>
+
+    <script>
+        
+    function contar() {
+        /*44) Crie um incremento, mostrando em seguida todos os valores no intervalo:
+        Ex: Digite o primeiro Valor: 3
+        Digite o último Valor: 10
+        Digite o incremento: 2
+        Contagem: 3 5 7 9 Acabou!*/
+
+        let primeiroValor = Number(document.getElementById('iprimeiroValor').value);
+        let ultimoValor = Number(document.getElementById('iultimoValor').value);
+        let incremento = Number(document.getElementById('iincremento').value);
+        let resposta = document.getElementById('iresposta');
+        resposta.innerHTML = '';
+
+        let i = primeiroValor;
+
+        if (primeiroValor < ultimoValor){
+            while ( i <= ultimoValor){
+                resposta.innerHTML += `${i} `;
+                i += incremento;
+            }
+        } else {
+            i = primeiroValor;
+            while ( i >= ultimoValor){
+                resposta.innerHTML += `${i} `;
+                i -= incremento; 
+            }
+        }
+    }
+
+
+
+    </script>
+</body>
+</html>
