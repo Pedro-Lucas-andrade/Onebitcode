@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let baralho = []
+        let opcao = ''
+        
+        do{
+            let cartas = ''
+            for (let i = 0; i < baralho.legnth; i++){
+                cartas += `${i+1}º ${baralho[i]}\n`
+            }
+
+            opcao = prompt('cartas:\n'+ cartas+' \n1- Adicionar Carta\n2- Puxar Carta\n3- Sair')
+
+            switch (opcao){
+                case '1':
+                    const cartaAdc = prompt('Digite o nome da carta: ')
+                    if(cartaAdc.length == 0){
+                        alert('Digite o nome da carta!')
+                        opcao = '1'
+                    }
+                    baralho.push(cartaAdc)
+                    break
+                case '2':
+                    const cartaPuxada = baralho.shift()
+                    if(cartaPuxada){
+                        alert(`A carta ${cartaPuxada} foi puxada `)
+                    }
+                    break
+                case '3':
+                    alert('encerrando...')
+                    break
+                default:
+                    alert('escolha uma opção para prosseguir!')
+            }
+        } while(opcao != '3')
+    </script>
+</body>
+</html>

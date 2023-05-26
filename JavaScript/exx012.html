@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fila = []
+        let opcao = ''
+        do{
+            let pacientes = ''
+            for (let i = 0; i < fila.length; i++){
+                pacientes += (i+1) + 'º' + fila[i] + '\n'
+            }
+            opcao = prompt('Fila de pacientes:\n'+ pacientes+'\nEscolha uma das opções:\n1- Adicionar paciente\n2- Consultar paciente\n3- Sair')
+
+            switch (opcao){
+                case '1':
+                    const novoPaciente = prompt('Digite o nome de paciente:')
+                    if(novoPaciente.length == 0){
+                        alert('Por favor, digite o nome do paciente!')
+                        opcao = '1'
+                    }
+                    fila.push(novoPaciente)
+                    break
+                case '2':
+                    const Consultados = fila.shift()
+                    if(Consultados){
+                        alert('O paciente '+ Consultados + ' foi removido')
+                    } else{
+                        alert('Não há pacientes na fila')
+                    }
+                    break
+                case '3':
+                    alert('Encerrando...')
+                    break
+                default:
+                    alert('Valor inválido!!!')
+            }
+        } while(opcao != '3')
+    </script>
+</body>
+</html>
