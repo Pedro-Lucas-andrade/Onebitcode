@@ -8,39 +8,40 @@
 </head>
 <body>
     <script>
-        let baralho = []
-        let opcao = ''
-        
-        do{
-            let cartas = ''
-            for (let i = 0; i < baralho.legnth; i++){
-                cartas += `${i+1}º ${baralho[i]}\n`
+        let Baralho = [];
+        let opcao;
+        while (opcao != '3'){
+
+            let cartas = '';
+            for (let i = 0; i < Baralho.length; i++){
+                cartas += `${(i+1)}º ${Baralho[i]}\n`
             }
 
-            opcao = prompt('cartas:\n'+ cartas+' \n1- Adicionar Carta\n2- Puxar Carta\n3- Sair')
-
+            opcao = prompt(`Cartas no Baralho:\n${cartas}Escolha uma das opções abaixo:\n\n1- Adicionar carta\n2-Puxar uma Carta\n3-Sair`);
             switch (opcao){
                 case '1':
-                    const cartaAdc = prompt('Digite o nome da carta: ')
+                    let cartaAdc = prompt('Digite o nome da carta que deseja adicionar ao Baralho: ');
                     if(cartaAdc.length == 0){
-                        alert('Digite o nome da carta!')
-                        opcao = '1'
+                        alert('Digite o nome da carta por favor!!!')
+                        opcao = '1';
+                    } else{
+                        Baralho.push(cartaAdc);
                     }
-                    baralho.push(cartaAdc)
-                    break
+                    break;
                 case '2':
-                    const cartaPuxada = baralho.shift()
-                    if(cartaPuxada){
-                        alert(`A carta ${cartaPuxada} foi puxada `)
+                    const cartaRemovida = Baralho.pop();
+                    if (cartaRemovida){
+                        alert(`A carta ${cartaRemovida} foi removida do baralho.`);
+                    } else {
+                        alert('Não há cartas para remover');
                     }
-                    break
+                    break;
                 case '3':
-                    alert('encerrando...')
-                    break
-                default:
-                    alert('escolha uma opção para prosseguir!')
+                    alert('Encerrando...');
+                    break;
             }
-        } while(opcao != '3')
+        }
+        
     </script>
 </body>
 </html>
