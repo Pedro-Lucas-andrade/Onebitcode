@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Notas</h1>
+    <p>
+        Digite sua nota:
+        <input type="number" name="nota" id="inota">
+    </p>
+    <p>
+        <input type="button" value="verificar" onclick="nota()">
+    </p>
+    <p id="iresposta"></p>
+    <script>
+        do{
+            function nota(){
+                let nota;
+                nota = Number(document.       getElementById('inota').value);
+                let resposta = document.getElementById('iresposta');
+
+                if ( nota <= 10 && nota >= 0){
+                    resposta.innerHTML  = `Nota válida!`;
+                    resposta.style.color = 'green';
+                } else {
+                    resposta.innerHTML = `Nota inválida!, Digite uma nota entre 0 e 10.`;
+                    resposta.style.color = 'red';
+                    nota = undefined;
+                }
+            }
+        }while (nota > 10 || nota < 0)
+        
+    </script>
+</body>
+</html>
