@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resposta;
+        let idade = [];
+        let i = 0;
+        let qidades = 0;
+        let sidades = 0;
+        let midades;
+        let mais21 = 0;
+        do{
+            do{
+                idade = Number(prompt(`Digite a idade da ${i+1}º pessoa:`));
+                i++;
+            } while(i < idade.length);
+            qidades += 1;
+            sidades += idade;
+            if ( idade > 21){
+                mais21 += 1;
+            }
+            resposta = prompt('Deseja continuart:\n1- Sim\n2- Não');
+        } while ( resposta != '2');
+        midades = sidades/qidades;
+
+        alert(`Idades inseridas: ${qidades}\nMédia das idades: ${midades.toFixed(0)}\nMais de 21 anos: ${mais21}`)
+
+    </script>
+</body>
+</html>
