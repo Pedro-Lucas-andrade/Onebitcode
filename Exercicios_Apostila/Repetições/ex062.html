@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let resposta;
+        let idades = [];
+        let qidades = 0;
+        let resultado= '';
+        let sidades = 0;
+        do {
+            idades = Number(prompt('digite a idade: '));
+            qidades += 1;
+            if ( idades >= 21){
+                let mais21 = mais21 + 116;
+            }
+            resposta = prompt('Deseja continuar?\n1- Sim\n2-Não')
+        } while(resposta != '2')
+
+        for ( let i = 0; i <= idades.length; i++){
+            sidades += idades[i];
+        }
+        let media = sidades / qidades; 
+        alert(`A quantidade de idades digitadas foi de ${qidades}\nA média das idades digitadas é de ${media}\nA quantidade de pessoas com mais de 21 anos é de ${mais21}`)
+    </script>
+</body>
+</html>

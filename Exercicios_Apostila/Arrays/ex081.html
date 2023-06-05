@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*81) Crie um programa que leia a idade de 8 pessoas e guarde-as em um vetor. No
+        final, mostre:a) Qual é a média de idade das pessoas cadastradas
+        b) Em quais posições temos pessoas com mais de 25 anos
+        c) Qual foi a maior idade digitada (podem haver repetições)
+        d) Em que posições digitamos a maior idade*/
+
+        let idade = [];
+        let posicões = '';
+        let maior = 0;
+        let posiçãoMaior;
+        let somaIdades = 0;
+        let mediaIdades;
+        for(let i = 0; i < 8; i++){
+            idade[i] = Number(prompt('Digite sua idade: '));
+            if ( idade[i] > 25){
+                posicões +=  `Mais de 25 anos na posição: ${i}\n`;
+            };
+            if( idade[i] > maior){
+                maior = idade[i];
+                posiçãoMaior = i;
+            };
+            somaIdades += idade[i];
+        };
+        mediaIdades = somaIdades / idade.length;
+        alert(`
+        A média das idades digitadas foi de ${mediaIdades} anos.\n
+        ${posicões}\n
+        A maior idade digitada foi de ${maior} anos\n
+        A posição da maior idade foi ${posiçãoMaior}º posição
+        `)
+    </script>
+</body>
+</html>

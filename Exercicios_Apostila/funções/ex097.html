@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maior Valor</h1>
+    <p>
+        Digite o primeiro valor:
+        <input type="number" name="n1" id="in1">
+        
+    </p>
+
+    <p>
+        Digite o segundo valor:
+        <input type="number" name="n2" id="in2">
+    </p>
+
+    <p>
+        Digite o terceiro valor:
+        <input type="number" name="n3" id="in3">
+    </p>
+    <p>
+        <input type="button" value="Maior" onclick="maior()">
+    </p>
+
+    <div id="resposta">
+    </div>
+
+    <script>
+
+        /*
+        91) Desenvolva um algoritmo que leia dois valores pelo teclado e passe esses
+        valores para um procedimento Maior() que vai verificar qual deles é o maior e
+        mostrá-lo na tela. Caso os dois valores sejam iguais, mostrar uma mensagem
+        informando essa característica.
+
+        97) Refaça o exercício 91, só que agora em forma de função Maior(), mas faça uma
+        adaptação que vai receber TRÊS números como parâmetro e vai retornar qual foi o
+        maior entre eles.*/
+
+        function maior(){
+            let resposta = document.getElementById('resposta');
+
+            function maiorq(n1, n2, n3){
+                if (n1 > n2 && n1 > n3){
+                    return n1;
+                } else if (n2 > n1 && n2 > n3){
+                    return n2;
+                } else {
+                    return n3;
+                };
+            };
+
+            resposta.innerHTML = `O maior é ${maiorq(Number(document.getElementById('in1').value),
+            Number(document.getElementById('in2').value),
+            Number(document.getElementById('in3').value))
+            }`;
+        };
+    </script>
+</body>
+</html>

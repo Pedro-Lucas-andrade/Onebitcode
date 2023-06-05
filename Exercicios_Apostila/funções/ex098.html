@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Super Somador</h1>
+    <p>
+        Digite o primeiro valor:
+        <input type="number" name="primeiroValor" id="primeiroValor">
+    </p>
+    <p>
+        Digite o segundo valor: 
+        <input type="number" name="segundoValor" id="segundoValor">
+    </p>
+    <p>
+        <input type="button" value="Somar Tudo" onclick="SuperSomador()">
+    </p>
+    <div id="resposta"></div>
+    <script>
+        /*98) Crie um programa que tenha uma função SuperSomador(), que vai receber dois
+        números como parâmetro e depois vai retornar a soma de todos os valores no
+        intervalo entre os valores recebidos.
+        Ex:
+        SuperSomador(1, 6) vai somar 1 + 2 + 3 + 4 + 5 + 6 e vai retornar 21
+        SuperSomador(15, 19) vai somar 15 + 16 + 17 + 18 + 19 e vai retornar 85*/
+        
+        function SuperSomador(){
+            let soma = 0;
+            function somador(valorInicial, valorFinal){
+                for( let i = valorInicial; i <= valorFinal; i++){
+                    soma += i;
+                };
+                return soma;
+            }
+        };
+
+        let resposta = document.getElementById('resposta');
+        resposta.innerHTML += `${somador(Number(document.getElementById('primeiroValor').value), Number(document.getElementById('segundoValor').value))}`;
+    </script>
+
+</body>
+</html>
