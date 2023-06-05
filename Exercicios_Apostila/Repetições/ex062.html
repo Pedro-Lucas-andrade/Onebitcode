@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     
     <script>
         let resposta;
@@ -28,6 +29,32 @@
         }
         let media = sidades / qidades; 
         alert(`A quantidade de idades digitadas foi de ${qidades}\nA média das idades digitadas é de ${media}\nA quantidade de pessoas com mais de 21 anos é de ${mais21}`)
+=======
+    <script>
+        let resposta;
+        let idade = [];
+        let i = 0;
+        let qidades = 0;
+        let sidades = 0;
+        let midades;
+        let mais21 = 0;
+        do{
+            do{
+                idade = Number(prompt(`Digite a idade da ${i+1}º pessoa:`));
+                i++;
+            } while(i < idade.length);
+            qidades += 1;
+            sidades += idade;
+            if ( idade > 21){
+                mais21 += 1;
+            }
+            resposta = prompt('Deseja continuart:\n1- Sim\n2- Não');
+        } while ( resposta != '2');
+        midades = sidades/qidades;
+
+        alert(`Idades inseridas: ${qidades}\nMédia das idades: ${midades.toFixed(0)}\nMais de 21 anos: ${mais21}`)
+
+>>>>>>> a349890f3de479adacf63709263fb85f389d092c
     </script>
 </body>
 </html>
