@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resposta;
+        let quantidadeDeImoveis = 0;
+        let imovel =[];
+
+        while(resposta != '3') {
+            
+            resposta = prompt(`Quantidade de imvóveis registrados: ${quantidadeDeImoveis}\n\nEscolha uma das opções abaixo:\n\n1- Salvar Imóvel\n2- Móveis salvos\n3- Sair`);
+
+            switch (resposta){
+                case '1':
+                    imovel.push({proprietario: prompt('Digite o nome do proprietário: '), quartos : Number(prompt('Digite a quantidade de quartos: ')), banheiros : Number(prompt('Digite a quantidade de banheiros: ')), garagem : prompt('Possui garagem? ')});
+                    quantidadeDeImoveis ++;
+                    break;
+                case '2':
+                    let imovelTexto = 'Imovéis Salvos:';
+                    for ( let i = 0; i < imovel.length; i++){
+                        imovelTexto += ` \n\nimovel ${i+1}:\n\nProprietário: ${imovel[i].proprietario}\nQuartos: ${imovel[i].quartos}\nBanheiros: ${imovel[i].banheiros}\nGaragem: ${imovel[i].garagem.toLocaleUpperCase()}`;
+                    };
+                    alert(imovelTexto);
+                    break;
+                case '3':
+                    alert('Encerrando...');
+                    break;
+                default:
+                    alert('Opção inválida!');
+                    break;
+            };
+        };
+    </script>
+</body>
+</html>
