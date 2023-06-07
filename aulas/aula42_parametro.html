@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dobro(a){
+            let mult = a * 2;
+            alert('o dobro de ' + a + ' é ' + mult)
+        }
+        //dobro(5);
+
+        function dizerOla(name = 'mundo'){
+            alert('olá, ' + name)
+        }
+        //dizerOla('Lucas');
+        //dizerOla();
+
+        function soma(a, b){
+            alert('O resultado da soma é ' + (a+b))
+        }
+        //soma(7, 13);
+
+        function criarUsuario(nome, email, senha, tipo = 'admin'){
+            const usuario = {
+                nome,
+                email,
+                senha,
+                tipo
+            }
+            console.log(usuario);
+        }
+        //criarUsuario('Lucas', 'pl314284@gmail.com', 'lucas123' );
+
+        function pessoa(usuario){
+            console.log(`O usuario ${usuario.nome} ${usuario.sobrenome} de ${usuario.idade} anos possui o email ${usuario.email} e tem o número de telefone ${usuario['telefone']}`)
+        };
+        const dadosDoUsuario = {
+            nome : 'lucas',
+            sobrenome : 'andrade',
+            email : 'lucas@gmail.com',
+            telefone : '88 92356365',
+            idade : 21
+        };
+        pessoa(dadosDoUsuario);
+    </script>
+</body>
+</html>
