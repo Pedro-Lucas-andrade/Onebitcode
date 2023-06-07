@@ -7,4 +7,4 @@ let lucas;
 for ( let i = 0; i <= 6; i++){
     arr[i] = Math.floor(Math.random()*100);
 }
-console.log(arr)
+console.log(arr);

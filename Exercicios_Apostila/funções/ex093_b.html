@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>
+        Digite o valor inicial:
+        <input type="number" name="inicio" id="inicio">
+    </p>
+    <p>
+        Digite o valor final:
+        <input type="number" name="fim" id="fim">
+    </p>
+    <p>
+        Digite o incremento:
+        <input type="number" name="incremento" id="incremento">
+    </p>
+    <p>
+        <input type="button" value="Contar" onclick="contador()">
+    </p>
+    <div id="res"></div>
+
+    <script>
+        /*93) Faça um programa que tenha um procedimento chamado Contador() que recebe
+        três valores como parâmetro: o início, o fim e o incremento de uma contagem. O
+        programa principal deve solicitar a digitação desses valores e passá-los ao
+        procedimento, que vai mostrar a contagem na tela.
+        Ex: Para os valores de início (4), fim (20) e incremento(3) teremos
+        Contador(4, 20, 3) vai mostrar na tela 4 >> 7 >> 10 >> 13 >> 16 >> 19 >> FIM*/
+        function contador(){
+            let resposta = document.getElementById('res');
+            function contador(inicio, fim, incremento){
+                for( let i = inicio; i <= fim; i += incremento){
+                    resposta.innerHTML += `${i} `;
+            };
+            };
+
+            contador( 
+                Number(document.getElementById('inicio').value), 
+                Number(document.getElementById('fim').value),
+                Number(document.getElementById('incremento').value)
+            );
+        };
+
+    </script>
+</body>
+</html>

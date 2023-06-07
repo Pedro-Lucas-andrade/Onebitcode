@@ -7,20 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <p>
-        Digite um nome: 
-        <input type="text" id="itext">
-    </p>
-
+    
     <script>
         /*77) Faça um programa que leia 7 nomes de pessoas e guarde-os em um vetor. No
         final, mostre uma listagem com todos os nomes informados, na ordem inversa
         daquela em que eles foram informados.*/
-        let nome = []
-        for( let i = 0; i <= 6; i++){
-            nome[i] = document.getElementById('itext');
-            
-        }
+        let nome = [];
+        for ( let i = 0; i < 7; i++){
+            nome[i] = prompt('Sigite o ' + (i+1) + ' º nome:');
+        };
+        for ( let i = 6; i >= 0; i--){
+            alert(nome[i]);
+        };
     </script>
 </body>
 </html>
