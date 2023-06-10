@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let opcao;
+
+        while( opcao != '6') {
+            opcao = prompt('CALCULADOR DE ÁREA (m) \n\nEscolha uma das opções abaixo:\n\n1- Área do triangulo\n2- Área do retângulo\n3- Área do quadrado\n4- Área do trápezio\n5- Área do círculo\n6-Sair');
+
+            switch (opcao){
+                case '1':
+                    alert(areaDoRetangulo(Number(prompt('Digite a base do triangulo: ')), Number(prompt('Digite a altura do triangulo: '))));
+                    break;
+                case '2':
+                    alert(areaDoRetangulo(Number(prompt('Digite a base do retangulo: ')), Number(prompt('Digite a altura do retangulo: '))));
+                    break;
+                case '3':
+                    alert(areaDoQuadrado(Number(prompt('Digite o lado do quadrado: '))));
+                    break;
+                case '4':
+                    alert(areaDoTrapezio(Number(prompt('Digite a base maior do trapézio: ')), Number(prompt('Digite a base menor do trapézio: ')), Number(prompt('digite a altura do trapézio: '))));
+                    break;
+                case '5':
+                    alert(areaDoCirculo(Number(prompt('Digite o raio do circulo: '))));
+                    break;
+                case '6':
+                    alert("Encerrando...");
+                    break;
+                default:
+                    alert('Opção inválida!');
+            };
+        };
+
+        function areaDoTriangulo(base, altura){
+            return base*altura/2 + ' m²';
+        };
+
+        function areaDoRetangulo(base, altura){
+            return base*altura + ' m²';
+        };
+
+        function areaDoQuadrado(lado){
+            return lado**2 + ' m²';
+        };
+
+        function areaDoTrapezio(baseMaior, baseMenor, altura){
+            return (baseMaior + baseMenor)*altura/2 + ' m²';
+        };
+
+        function areaDoCirculo(raio){
+            return (Math.pow(raio, 2)*Math.PI).toFixed(2) + ' m²';
+        };
+    </script>
+</body>
+</html>
